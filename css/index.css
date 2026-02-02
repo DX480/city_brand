@@ -1,0 +1,237 @@
+.wrap{
+     margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+}
+
+header{
+    width: 100%;
+    padding: 30px 70px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+
+}
+
+header .gnb ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+header a:last-child{
+    display: block;
+
+}
+
+.logo{
+    width:59px;
+    height: 61px;
+    background: url(/images/logo.png);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+     transform: translate(-50%, -50%);
+}
+
+
+/* banner */
+.banner{
+    width: 100%;
+    height: 1080px;
+    background-color: rgb(197, 197, 197);
+}
+
+/* intro */
+.intro{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+    padding: 100px 160px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.title{font-size: 48px; font-weight: 700; z-index: 100;}
+.article{font-size: 24px; font-weight: 300; text-align: end; z-index: 100;}
+
+.intro img:nth-child(3){
+    width: 782px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+}
+.intro img:nth-child(4){
+    width: 577px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+}
+
+.project{
+    display: flex; flex-wrap: wrap; flex-direction: column; padding: 100px 160px; box-sizing: border-box; gap: 200px; align-items: center;
+}
+
+.project .contents{ width: 100%; display: flex; flex-wrap: wrap; flex-direction: column; gap: 100px;}
+
+.project .contents .card_list{
+    display: flex; flex-wrap: wrap; justify-content: space-between; 
+}
+.project .contents .card_list .side_card{
+    display: flex; flex-wrap: wrap; flex-direction: column; justify-content: end; gap: 20px;
+}
+
+.project .contents .card_list:first-child .side_card:last-child{
+    justify-content: start;
+}
+
+.project .contents .card_list:last-child .side_card:nth-child(2){
+    justify-content: start;
+}
+
+.project .contents .card_list .main_card{
+    display: flex; flex-wrap: wrap; flex-direction: column; justify-content: end; gap: 20px;
+}
+
+.project .contents .card_list .main_card .main_card_thum{
+   width: 720px;
+   height: 780px;
+   background-color: #777; border-radius: 15px;
+}
+.project .contents .card_list .side_card .side_card_thum{
+   width: 420px;
+   height: 389px;
+   background-color: #777; border-radius: 15px;
+}
+
+.card_info{
+    display: flex; flex-wrap: wrap; flex-direction: column;
+}
+.card_info p{ font-size: 24px;}
+.card_info p span{ font-size: 20px; color: #777;}
+
+
+/* overview */
+.overview{
+    width: 100%;
+    height: 1080px;
+    background-color: #777;
+}
+
+
+/* service */
+.service{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;flex-direction: column;
+    gap: 200px;
+    padding: 100px 160px;
+    box-sizing: border-box;
+}
+
+.service .card_list{ width: 100%;
+display: flex; flex-wrap: wrap; flex-direction: column; gap: 80px; align-items: center;}
+
+.service .card_list .card { width: 100%;
+display: flex; flex-wrap: wrap; justify-content: space-between;  box-sizing: border-box;}
+
+.service .card_list .card .card_info{ width: 720px;
+display: flex; flex-wrap: wrap; flex-direction: column; justify-content: space-between; padding:0px 24px; padding-bottom: 112px;}
+
+.service .card_list .card .card_info .title_box{
+display: flex; flex-wrap: wrap; flex-direction: column; padding-bottom: 32px; border-bottom: 2px solid #000; box-sizing: border-box;}
+.service .card_list .card .card_thum{
+    width: 720px; height: 420px; background-color: #777; border-radius: 15px;
+}
+
+
+/* representation */
+.representation{
+    width: 100%;
+    position: relative;
+}
+.representation .contents{
+    width: 100%;
+    display: flex; flex-wrap: wrap; justify-content: space-between;
+        padding: 120px 160px;
+    box-sizing: border-box;
+    align-items: end;
+}
+
+.representation .contents .scroll-lock {
+  overflow: hidden;
+}
+
+.representation .title_wrap{ position: absolute; top: 184px; left: 160px;}
+
+
+.swiperA {
+  width: 686px;
+  height: 760px;
+  overflow: hidden;
+  display: flex; flex-wrap: wrap;
+  justify-content:space-between;
+}
+
+.swiperA .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 686px;
+  height: 760px; 
+  opacity: 1;
+}
+
+.swiperA .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+
+
+
+.swiperB{
+  display: flex; flex-direction: column; width: 645px; height:353px; padding-bottom: 194px; background-color: aqua;
+}
+.swiperB .swiper-slide{
+  display: flex; flex-direction: column;
+gap: 33px;
+}
+
+.swiperB .swiper-slide .title_wrap{
+  width: 100%;
+  display: flex; flex-wrap: wrap; flex-direction: column; gap: 16px;
+  padding-bottom: 24px;
+  box-sizing: border-box;
+  border-bottom: #111 4px solid ;
+}
+
+.mySwiperB .swiper-wrapper {
+  position: relative;
+}
+
+.mySwiperB .swiper-slide {
+  opacity: 0;
+  transition-property: opacity;
+}
+
+.mySwiperB .swiper-slide-active,
+.mySwiperB .swiper-slide-duplicate-active {
+  opacity: 1 !important;
+}
+
+.mySwiperB .swiper-slide-prev,
+.mySwiperB .swiper-slide-next {
+  opacity: 0;
+}

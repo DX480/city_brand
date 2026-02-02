@@ -1,0 +1,42 @@
+.section_title{ font-family: 'Paperlogy'; font-size: 128px; line-height: 130%; font-weight: 700;}
+.section_article{ font-family: 'Paperlogy'; font-size: 24px; line-height: 130%; font-weight: 600;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* section_title */
+.section_title_wrap{
+   width: 100%; display: flex; flex-wrap: wrap; flex-direction: column; gap: 32px; padding: 20px 0; box-sizing: border-box;
+   text-align: center; align-items: center; 
+}
+.text_wrap{ display: flex; flex-wrap: wrap; flex-direction: column;}
+.section_title_wrap hr{ width: 330px; border: 1px solid #000;}
+
+.round_btn{
+   width: fit-content;;
+    padding: 24px 62px;
+    border: 2px solid #000;
+    color: #000;
+    border-radius: 100px;
+    transition: .3s;
+}
+.round_btn:hover{
+ background: #000;
+ color: #fff;
+}
+.round_btn p{
+   font-size: 16px; line-height: 130%;
+}
