@@ -79,9 +79,12 @@ header a:last-child{
 
 .project{
     display: flex; flex-wrap: wrap; flex-direction: column; padding: 100px 160px; box-sizing: border-box; gap: 200px; align-items: center;
+    position: relative; overflow: hidden;
 }
 
-.project .contents{ width: 100%; display: flex; flex-wrap: wrap; flex-direction: column; gap: 100px;}
+.project .section_title_wrap{z-index: 6;}
+
+.project .contents{ width: 100%; display: flex; flex-wrap: wrap; flex-direction: column; gap: 100px; z-index: 3;}
 
 .project .contents .card_list{
     display: flex; flex-wrap: wrap; justify-content: space-between; 
@@ -105,20 +108,42 @@ header a:last-child{
 .project .contents .card_list .main_card .main_card_thum{
    width: 720px;
    height: 780px;
-   background-color: #777; border-radius: 15px;
+    border-radius: 15px;
 }
 .project .contents .card_list .side_card .side_card_thum{
    width: 420px;
    height: 389px;
-   background-color: #777; border-radius: 15px;
+    border-radius: 15px;
 }
 
-.card_info{
+.project .contents .card_list:first-child .side_card:first-child .side_card_thum{
+   background: url(/images/project_thum-0.jpg);
+}
+.project .contents .card_list:first-child .main_card:nth-child(2) .main_card_thum{
+   background: url(/images/project_thum-1.jpg);
+}
+.project .contents .card_list:first-child .side_card:last-child .side_card_thum{
+   background: url(/images/project_thum-2.jpg);
+}
+.project .contents .card_list:last-child .side_card:first-child .side_card_thum{
+   background: url(/images/project_thum-3.jpg);
+}
+.project .contents .card_list:last-child .side_card:nth-child(2) .side_card_thum{
+   background: url(/images/project_thum-4.jpg);
+}
+.project .contents .card_list:last-child .main_card:last-child .main_card_thum{
+   background: url(/images/project_thum-5.jpg);
+}
+
+
+.project .card_info{
     display: flex; flex-wrap: wrap; flex-direction: column;
 }
-.card_info p{ font-size: 24px;}
-.card_info p span{ font-size: 20px; color: #777;}
+.project .card_info p{ font-size: 24px;}
+.project .card_info p span{ font-size: 20px; color: #777;}
 
+.project .bg_img:nth-child(4){ z-index: 1; position: absolute; top: 250px; left: -100px; width: 769px; height: 769px; background: rgba(111, 253, 142, 0.2); border-radius: 800px;}
+.project .bg_img:last-child{ z-index: 1; position: absolute; bottom: 50px; right: -686px; width: 1400px; height: 1400px; background: rgba(151, 238, 255, 0.5); border-radius: 1400px;}
 
 /* overview */
 .overview{
