@@ -102,7 +102,7 @@ $(document).ready(function () {
   );
 
   bannerTimeline.to(
-    ".text_wrap",
+    ".banner .text_wrap",
     {
       opacity: 1,  
       duration: 0.6,
@@ -120,74 +120,5 @@ $(document).ready(function () {
     },
     0,
   );
-
-
-  bannerTimeline.to(
-    "#img02",
-    {
-      opacity: 1,
-      y: -100,
-      duration: 0.15,
-      ease: "power2.out",
-    },
-    0.35,
-  );
-
-  bannerTimeline.to(
-    "#img02",
-    {
-      opacity: 0,
-      y: -200,
-      duration: 0.15,
-      ease: "power2.in",
-    },
-    0.5,
-  );
-
-
-
-  $("section").each(function (index) {
-    var section = this;
-    var sectionId = $(this).attr("id");
-
-    var topPinSections = ["about", "skills", "contact"];
-    var btmPinSections = ["skills", "project"];
-
-    if (topPinSections.indexOf(sectionId) !== -1) {
-      ScrollTrigger.create({
-        trigger: section,
-        start: "top top",
-        end: "+=40%",
-        pin: true,
-        pinSpacing: true,
-        scrub: 5,
-        anticipatePin: false,
-        onEnter: function () {
-          console.log("Section entered: " + sectionId);
-        },
-        onLeave: function () {
-          console.log("Section left: " + sectionId);
-        },
-      });
-    }
-
-    if (btmPinSections.indexOf(sectionId) !== -1) {
-      ScrollTrigger.create({
-        trigger: section,
-        start: "bottom bottom",
-        end: "+=40%",
-        pin: true,
-        pinSpacing: true,
-        scrub: 5,
-        anticipatePin: false,
-        onEnter: function () {
-          console.log("Section entered (bottom): " + sectionId);
-        },
-        onLeave: function () {
-          console.log("Section left (bottom): " + sectionId);
-        },
-      });
-    }
-  });
 
 });

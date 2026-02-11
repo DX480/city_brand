@@ -1,13 +1,22 @@
 .banner_title{ font-family: 'Paperlogy'; font-size: 108px; font-weight: 300; }
 .section_title{ font-family: 'Paperlogy'; font-size: 128px; line-height: 130%; font-weight: 700;}
-.section_article{ font-family: 'Paperlogy'; font-size: 24px; line-height: 130%; font-weight: 600;}
+.section_article{ font-size: 24px; line-height: 130%; font-weight: 600;}
+
+.contents_title_xxlarge{ font-family: 'Paperlogy'; font-size: 72px; font-weight: 700;}
+.contents_title_xlarge{ font-family: 'Paperlogy'; font-size: 50px; font-weight: 600;}
+.contents_title_large{ font-family: 'Paperlogy'; font-size: 48px; font-weight: 700;}
+.contents_title_medium{ font-family: 'Paperlogy'; font-size: 34px; font-weight: 700;}
+.contents_title_small{ font-family: 'Paperlogy'; font-size: 32px; font-weight: 700;}
+.contents_title_xsmall{ font-family: 'Paperlogy'; font-size: 24px; font-weight: 600;}
+.contents_title_xxsmall{ font-family: 'Paperlogy'; font-size: 23px; font-weight: 700;}
+.contents_title_xxxsmall{ font-family: 'Paperlogy'; font-size: 20px; font-weight: 700;}
 
 
-
-
-
-
-
+.contents_article_xlarge{ font-size: 48px; font-weight: 500;}
+.contents_article_large{ font-size: 32px; font-weight: 600;}
+.contents_article_medium{ font-size: 24px; font-weight: 600;}
+.contents_article_small{ font-size: 20px; font-weight: 600; line-height: 130%; letter-spacing: -1px;}
+.contents_article_xsmall{ font-size: 16px; font-weight: 600;}
 
 
 
@@ -21,11 +30,9 @@
 
 /* section_title */
 .section_title_wrap{
-   width: 100%; display: flex; flex-wrap: wrap; flex-direction: column; gap: 32px; padding: 20px 0; box-sizing: border-box;
+   width: 100%; display: flex; flex-wrap: wrap; flex-direction: column; padding: 20px 0; box-sizing: border-box;
    text-align: center; align-items: center; 
 }
-.text_wrap{ display: flex; flex-wrap: wrap; flex-direction: column;}
-.section_title_wrap hr{ width: 330px; border: 1px solid #000;}
 
 .round_btn{
    width: fit-content;;
@@ -40,5 +47,5 @@
  color: #fff;
 }
 .round_btn p{
-   font-size: 16px; line-height: 130%;
+   font-size: 20px; line-height: 130%; font-weight: 600;
 }
