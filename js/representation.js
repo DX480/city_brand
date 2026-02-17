@@ -1,3 +1,16 @@
+const START_INDEX = 1;
+
+var swiperB = new Swiper(".mySwiperB", {
+  direction: "vertical",
+  effect: "fade",
+  fadeEffect: { crossFade: true },
+  centeredSlides: true,
+  slidesPerView: 1,
+  speed: 1200,
+  allowTouchMove: false,
+  mousewheel: false,
+});
+
 var swiperA = new Swiper(".mySwiperA", {
   direction: "vertical",
   grabCursor: true,
@@ -7,90 +20,37 @@ var swiperA = new Swiper(".mySwiperA", {
   speed: 1200,
   a11y: false,
   pagination: false,
-  mousewheel: false, // mousewheel 비활성화 (수동으로 제어)
+  mousewheel: true,
   on: {
-    slideChange: function () {},
+    init() {
+      swiperB.update();
+    },
+    slideChange() {
+      swiperB.slideTo(this.activeIndex, 1200);
+    },
   },
 });
 
-var swiperB = new Swiper(".mySwiperB", {
-  direction: "vertical",
-  effect: 'fade',
-  fadeEffect: {
-    crossFade: true
-  },
-  grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: "1",
-  speed: 1500,
-  a11y: false,
-  pagination: false,
-  mousewheel: false, // mousewheel 비활성화 (수동으로 제어)
-  on: {
-    slideChange: function () {},
-  },
-});
-
-// 올바른 셀렉터 사용
-const $contents = document.querySelector(".representation .contents");
+const $scope = document.querySelector(".rerepresentation .contents"); // 커서 어디든 먹게
 
 let locked = false;
+function lock() { locked = true; }
+function unlock() { locked = false; }
+
+swiperA.on("transitionEnd", unlock);
+swiperA.on("slideChangeTransitionEnd", unlock);
+swiperA.on("touchEnd", unlock);
 
 function moveBoth(dir) {
   if (locked) return;
-  locked = true;
+  lock();
 
-  if (dir > 0) {
-    swiperA.slideNext();
-    swiperB.slideNext();
-  } else {
-    swiperA.slidePrev();
-    swiperB.slidePrev();
-  }
-
-  window.setTimeout(
-    () => {
-      locked = false;
-    },
-    Math.max(swiperA.params.speed, swiperB.params.speed) + 50,
-  );
+  if (dir > 0) swiperA.slideNext();
+  else swiperA.slidePrev();
 }
 
-// wheel 이벤트
-$contents.addEventListener(
-  "wheel",
-  (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-
-    const dir = e.deltaY > 0 ? 1 : -1;
-    moveBoth(dir);
-  },
-  { passive: false },
-);
-
-// 터치 이벤트
-let startY = 0;
-$contents.addEventListener(
-  "touchstart",
-  (e) => {
-    startY = e.touches[0].clientY;
-  },
-  { passive: true },
-);
-
-$contents.addEventListener(
-  "touchmove",
-  (e) => {
-    e.preventDefault();
-
-    const currentY = e.touches[0].clientY;
-    const diff = startY - currentY;
-
-    if (Math.abs(diff) > 12) {
-      moveBoth(diff > 0 ? 1 : -1);
-      startY = currentY;
-    }
-  },
-  { passive: false },
-);
+$scope.addEventListener("wheel", (e) => {
+  e.preventDefault();
+  const dir = e.deltaY > 0 ? 1 : -1;
+  moveBoth(dir);
+}, { passive: false });

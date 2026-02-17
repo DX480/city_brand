@@ -121,4 +121,12 @@ $(document).ready(function () {
     0,
   );
 
+    ScrollTrigger.create({
+    trigger: ".representation",
+    start: "bottom bottom",
+    end: "+=150%", 
+    pin: true,
+    pinSpacing: true,
+    scrub: 3,
+  });
 });
