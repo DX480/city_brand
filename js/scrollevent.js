@@ -123,10 +123,13 @@ $(document).ready(function () {
 
     ScrollTrigger.create({
     trigger: ".representation",
-    start: "bottom bottom",
+    start: "+=10%",
     end: "+=150%", 
     pin: true,
     pinSpacing: true,
     scrub: 3,
   });
+
+  
 });
+

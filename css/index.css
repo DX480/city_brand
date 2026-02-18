@@ -227,6 +227,7 @@ header a:last-child{
 .collaborations{
     width: 100%; display: flex; flex-direction: column; gap: 80px; padding: 120px 0; box-sizing: border-box; background: url("../images/collaborations_bg.jpg") 50% 50% /cover no-repeat;
 }
+
 .collaborations .title_wrap{
    width: 100%; display: flex; flex-wrap: wrap; justify-content: space-between; padding: 0 160px; box-sizing: border-box; align-items: center;
 }
@@ -415,9 +416,17 @@ gap: 33px;
 
 
   /* contact */
-.Contact{ position: relative; width: 100%; padding: 56px 300px 160px 160px; box-sizing: border-box; display: flex; justify-content: space-between; background: #121212; align-items: end;}
+.Contact{ position: relative; width: 100%; padding: 56px 160px 160px 160px; box-sizing: border-box; display: flex; justify-content: space-between; background: #121212; align-items: end;}
 .Contact p{ color: #fff; font-family: 'Paperlogy'; font-size: 130px; line-height: 150%; letter-spacing: 0px; font-weight: 600; }
 .Contact p:first-child{z-index: 222; top: 56px; left: 160px; position: absolute; color: #00000000; -webkit-text-stroke-width: 4px;  -webkit-text-stroke-color: #fff;  }
 .Contact p span{letter-spacing: -5px; }
 .Contact > img{ position: absolute; top: -290px; left: -90px; transform: rotate(-25deg);}
 
+/* footer */
+footer{ display: flex; justify-content: space-between; padding: 32px 56px 100px 56px; box-sizing: border-box; color: #fff; background: #121212;}
+.footer_info { display: flex; flex-direction: column; gap: 40px; box-sizing: border-box;}
+
+.footer_util{ display: flex; flex-direction: column; justify-content: space-between;}
+.footer_util .contact_wrap{display: flex; flex-direction: column; gap: 40px;}
+.footer_util .sns{ display: flex; justify-content: space-between;}
+.footer_util p{ text-align: end;}

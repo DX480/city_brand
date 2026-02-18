@@ -4,13 +4,13 @@ let rollingSwiper;
 
 function PlayRollingSwiperTop() {
   rollingSwiperTop = new Swiper('.collaborations_slide_top', {
-    centeredSlides: true,
-    loop: true,
-    slidesPerView: 3,     // ✅ 간격을 Swiper 옵션으로 통일
+   loop: true,
+    slidesPerView: 3,
     allowTouchMove: false,
     observer: true,
     observeParents: true,
     autoplay: false,
+    loopedSlides: 7,
   });
 
   let lastTime = null;
@@ -59,17 +59,17 @@ window.addEventListener('load', function () {
 
 function PlayRollingSwiperBtm() {
   rollingSwiperBtm = new Swiper('.collaborations_slide_btm ', {
-    centeredSlides: true,
     loop: true,
     slidesPerView: 3,
     allowTouchMove: false,
     observer: true,
     observeParents: true,
     autoplay: false,
+    loopedSlides: 7,
   });
 
   let lastTime = null;
-  const normalSpeed = 0.07;  
+  const normalSpeed = 0.07 
   const hoverSpeed = 0.02;   // 호버 시 속도 (낮을수록 느림)
   let currentSpeed = normalSpeed;
   let targetSpeed = normalSpeed;

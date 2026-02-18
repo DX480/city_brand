@@ -1,4 +1,8 @@
-const START_INDEX = 1;
+const START_INDEX = 0;
+const wheelArea = document.querySelector(".representation");
+const THRESHOLD = 50;      // 이 이상 움직여야 슬라이드
+const DURATION = 1200;     // swiper speed와 맞추기
+let wheelLocked = false;
 
 var swiperB = new Swiper(".mySwiperB", {
   direction: "vertical",
@@ -11,19 +15,23 @@ var swiperB = new Swiper(".mySwiperB", {
   mousewheel: false,
 });
 
+
 var swiperA = new Swiper(".mySwiperA", {
   direction: "vertical",
-  grabCursor: true,
   centeredSlides: true,
-  centeredSlidesBounds: true,
-  slidesPerView: "1",
   speed: 1200,
-  a11y: false,
-  pagination: false,
   mousewheel: true,
+  slidesPerView: "1",
+  allowTouchMove: false,
+  simulateTouch: true,
+
+  autoHeight: false,
+  observer: true,
+  observeParents: true,
+
   on: {
     init() {
-      swiperB.update();
+      swiperB.slideTo(START_INDEX, 0);
     },
     slideChange() {
       swiperB.slideTo(this.activeIndex, 1200);
@@ -31,26 +39,27 @@ var swiperA = new Swiper(".mySwiperA", {
   },
 });
 
-const $scope = document.querySelector(".rerepresentation .contents"); // 커서 어디든 먹게
+wheelArea.addEventListener(
+  "wheel",
+  (e) => {
+ 
+    e.preventDefault();
 
-let locked = false;
-function lock() { locked = true; }
-function unlock() { locked = false; }
+    if (wheelLocked) return;
 
-swiperA.on("transitionEnd", unlock);
-swiperA.on("slideChangeTransitionEnd", unlock);
-swiperA.on("touchEnd", unlock);
+    const dy = e.deltaY;
 
-function moveBoth(dir) {
-  if (locked) return;
-  lock();
+    if (Math.abs(dy) < THRESHOLD) return;
 
-  if (dir > 0) swiperA.slideNext();
-  else swiperA.slidePrev();
-}
+    wheelLocked = true;
 
-$scope.addEventListener("wheel", (e) => {
-  e.preventDefault();
-  const dir = e.deltaY > 0 ? 1 : -1;
-  moveBoth(dir);
-}, { passive: false });
+    if (dy > 0) swiperA.slideNext();
+    else swiperA.slidePrev();
+
+
+    setTimeout(() => {
+      wheelLocked = false;
+    }, DURATION);
+  },
+  { passive: false }
+);
