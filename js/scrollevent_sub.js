@@ -65,7 +65,6 @@ const scroll = new Scrooth({
   deceleration: 0.875,
 });
 
-
 $(document).ready(function () {
   gsap.registerPlugin(ScrollTrigger);
 
@@ -73,124 +72,23 @@ $(document).ready(function () {
     scrollTrigger: {
       trigger: ".banner",
       start: "top top",
-      end: "+=300%",
-      scrub: 1,
+      end: "+=50%",
       pin: true,
       pinSpacing: true,
-      invalidateOnRefresh: true,
-      anticipatePin: 1,
-    },
-  });
-
-  bannerTimeline.to(
-    ".banner_title",
-    {
-      opacity: 0,
-      duration: 0.4,
-      ease: "power2.out",
-    },
-    0,
-  );
-
-  bannerTimeline.to(
-    ".banner_logo",
-    {
-      opacity: 0,
-      duration: 0.4,
-      ease: "power2.out",
-    },
-    0,
-  );
-
-  bannerTimeline.to(
-    ".banner .text_wrap",
-    {
-      opacity: 1,  
-      duration: 0.6,
-      ease: "power2.out",
-    },
-    0.4,
-  );
-
-  bannerTimeline.to(
-    ".banner_darkmask",
-    {
-      opacity: 0.9,
-      duration: 0.4,
-      ease: "power2.in",
-    },
-    0,
-  );
-
-    ScrollTrigger.create({
-    trigger: ".representation",
-    start: "+=10%",
-    end: "+=150%", 
-    pin: true,
-    pinSpacing: true,
-    scrub: 3,
-  });
-
-  let serviceTimeline = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".service",
-      start: "bottom bottom",
-      end: "bottom top",
       scrub: 1,
-      invalidateOnRefresh: true,
-      anticipatePin: 1,
     },
   });
 
- serviceTimeline.to(
-    ".representation",
+  bannerTimeline.to(
+    ".tap_lnb_btn",
     {
-      "background-color":"#fff",
-      duration: 0.1,
+      scale: 0.5,
+      "top":"none",
+      "bottom":"50vh",
       ease: "power2.out",
+      duration: 1,
     },
-    0,
+    1,
   );
 
- serviceTimeline.to(
-    ".service",
-    {
-      "background-color":"#fff",
-      duration: 0.1,
-      ease: "power2.out",
-    },
-    0,
-  );
-
-  let representationTimeline = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".representation",
-      start: "bottom bottom",
-      end: "bottom top",
-      scrub: 1,
-      invalidateOnRefresh: true,
-      anticipatePin: 1,
-    },
-  });
-
-representationTimeline.to(
-    ".representation",
-    {
-      "background-color":"#121212",
-      duration: 0.1,
-      ease: "power2.out",
-    },
-    0,
-  );
-
-representationTimeline.to(
-    ".history",
-    {
-      "background-color":"#121212",
-      duration: 0.1,
-      ease: "power2.out",
-    },
-    0,
-  );
 });
-
