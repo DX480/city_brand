@@ -121,6 +121,7 @@ $(document).ready(function () {
     0,
   );
 
+
     ScrollTrigger.create({
     trigger: ".representation",
     start: "+=10%",
@@ -130,6 +131,72 @@ $(document).ready(function () {
     scrub: 3,
   });
 
+  let serviceTimeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".service",
+      start: "bottom bottom",
+      end: "bottom top",
+      scrub: 1,
+      invalidateOnRefresh: true,
+      anticipatePin: 1,
+    },
+  });
+
+ serviceTimeline.to(
+    ".representation",
+    {
+      "background-color":"#fff",
+      duration: 0.1,
+      ease: "power2.out",
+    },
+    0,
+  );
+
+ serviceTimeline.to(
+    ".service",
+    {
+      "background-color":"#fff",
+      duration: 0.1,
+      ease: "power2.out",
+    },
+    0,
+  );
+
+  let representationTimeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".representation",
+      start: "bottom bottom",
+      end: "bottom top",
+      scrub: 1,
+      invalidateOnRefresh: true,
+      anticipatePin: 1,
+    },
+  });
+
+
+representationTimeline.to(
+    ".representation",
+    {
+      "background-color":"#121212",
+      duration: 0.1,
+      ease: "power2.out",
+    },
+    0,
+  );
+
+representationTimeline.to(
+    ".history",
+    {
+      "background-color":"#121212",
+      duration: 0.1,
+      ease: "power2.out",
+    },
+    0,
+  );
+
   
+
+
+
 });
 

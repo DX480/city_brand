@@ -4,7 +4,6 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-
 }
 
 header{
@@ -18,6 +17,7 @@ header{
     top: 0;
     left: 0;
     z-index: 100;
+   
 
 }
 
@@ -113,7 +113,7 @@ header a:last-child{
 /* project */
 .project{
     display: flex; flex-wrap: wrap; flex-direction: column; padding: 200px 160px; box-sizing: border-box; gap: 200px; align-items: center;
-    position: relative; overflow: hidden;
+    position: relative; overflow: hidden; background: #fff;
 }
 
 .project .section_title_wrap{z-index: 6;}
@@ -310,6 +310,7 @@ header a:last-child{
     position: relative;
     padding: 200px 160px;
     box-sizing: border-box;
+    background: #121212;
 }
 .representation .contents{
     width: 100%;
@@ -391,7 +392,7 @@ gap: 33px;
 
 
 /* .history */
-.history{width: 100%; display: flex; justify-content: space-between; padding: 200px 160px; box-sizing: border-box; color: #fff; background: #121212;}
+.history{width: 100%; display: flex; justify-content: space-between; padding: 200px 160px; box-sizing: border-box; color: #fff; background: #fff;}
 .history .title_wrap{ display: flex; flex-direction: column; gap: 13px;}
 .history .history_box_list{display: flex; flex-direction: column; width: 686px; height: 700px; justify-content: space-between;}
 .history_box_list .box_title_wrap{display: flex; justify-content: space-between; border-bottom: 1px #777 solid; align-items: center; padding: 10px 0; box-sizing: border-box;}
