@@ -16,7 +16,7 @@
 
 .contents_article_xlarge{ font-size: 48px; font-weight: 500;}
 .contents_article_large{ font-size: 32px; font-weight: 600;}
-.contents_article_medium{ font-size: 24px; font-weight: 600;}
+.contents_article_medium{ font-size: 24px; font-weight: 600; line-height: 150%;}
 .contents_article_small{ font-size: 20px; font-weight: 600; line-height: 130%; letter-spacing: -1px;}
 .contents_article_xsmall{ font-size: 16px; font-weight: 600; line-height: 150%;}
 
