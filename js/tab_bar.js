@@ -40,3 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
     moveSelectBoxTo(activeIndex >= 0 ? activeIndex : 0, false);
   });
 });
+
+gsap.set(".floating_obj", {
+  bottom: "10vh"   // 화면 하단 기준 10%
+});

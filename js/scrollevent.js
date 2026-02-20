@@ -124,7 +124,7 @@ $(document).ready(function () {
 
     ScrollTrigger.create({
     trigger: ".representation",
-    start: "+=10%",
+    start: "+=5%",
     end: "+=150%", 
     pin: true,
     pinSpacing: true,
@@ -146,7 +146,7 @@ $(document).ready(function () {
     ".representation",
     {
       "background-color":"#fff",
-      duration: 0.1,
+      duration: 0.7,
       ease: "power2.out",
     },
     0,
@@ -156,7 +156,7 @@ $(document).ready(function () {
     ".service",
     {
       "background-color":"#fff",
-      duration: 0.1,
+      duration: 0.7,
       ease: "power2.out",
     },
     0,
@@ -173,24 +173,39 @@ $(document).ready(function () {
     },
   });
 
-representationTimeline.to(
+  
+  let historyTimeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".history",
+      start: "-=60%",
+      end: "bottom bottom",
+      scrub: 1,
+      invalidateOnRefresh: true,
+      anticipatePin: 1,
+    },
+  });
+
+
+  historyTimeline.to(
     ".representation",
     {
       "background-color":"#121212",
-      duration: 0.1,
+      duration: 0.2,
       ease: "power2.out",
     },
     0,
   );
 
-representationTimeline.to(
+  historyTimeline.to(
     ".history",
     {
       "background-color":"#121212",
-      duration: 0.1,
+      duration: 0.2,
       ease: "power2.out",
     },
     0,
   );
+
+
 });
 

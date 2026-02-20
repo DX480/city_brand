@@ -14,7 +14,7 @@ function PlayRollingSwiperTop() {
   });
 
   let lastTime = null;
-  const normalSpeed = 0.07;
+  const normalSpeed = 0.15;
   const hoverSpeed = 0.02;
   let currentSpeed = normalSpeed;
   let targetSpeed = normalSpeed;
@@ -69,7 +69,7 @@ function PlayRollingSwiperBtm() {
   });
 
   let lastTime = null;
-  const normalSpeed = 0.07 
+  const normalSpeed = 0.15
   const hoverSpeed = 0.02;   // 호버 시 속도 (낮을수록 느림)
   let currentSpeed = normalSpeed;
   let targetSpeed = normalSpeed;

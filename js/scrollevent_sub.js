@@ -83,12 +83,12 @@ $(document).ready(function () {
     ".tap_lnb_btn",
     {
       scale: 0.5,
-      "top":"none",
-      "bottom":"50vh",
+      "top":"85vh",
       ease: "power2.out",
       duration: 1,
     },
     1,
   );
+
 
 });
