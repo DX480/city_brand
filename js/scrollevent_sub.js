@@ -1,69 +1,29 @@
-class Scrooth {
-  constructor({
-    element = window,
-    strength = 10,
-    acceleration = 1.2,
-    deceleration = 0.975,
-  } = {}) {
-    this.element = element;
-    this.distance = strength;
-    this.acceleration = acceleration;
-    this.deceleration = deceleration;
-    this.running = false;
+const lenis = new Lenis({
+    duration: 2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+});
 
-    this.element.addEventListener("wheel", this.scrollHandler.bind(this), {
-      passive: false,
-    });
-    this.element.addEventListener("mousewheel", this.scrollHandler.bind(this), {
-      passive: false,
-    });
-    this.scroll = this.scroll.bind(this);
-  }
-
-  scrollHandler(e) {
-    e.preventDefault();
-
-    if (!this.running) {
-      this.top = this.element.pageYOffset || this.element.scrollTop || 0;
-      this.running = true;
-      this.currentDistance = e.deltaY > 0 ? 0.1 : -0.1;
-      this.isDistanceAsc = true;
-      this.scroll();
-    } else {
-      this.isDistanceAsc = false;
-      this.currentDistance = e.deltaY > 0 ? this.distance : -this.distance;
-    }
-  }
-
-  scroll() {
-    if (this.running) {
-      this.currentDistance *=
-        this.isDistanceAsc === true ? this.acceleration : this.deceleration;
-      Math.abs(this.currentDistance) < 0.1 && this.isDistanceAsc === false
-        ? (this.running = false)
-        : 1;
-      Math.abs(this.currentDistance) >= Math.abs(this.distance)
-        ? (this.isDistanceAsc = false)
-        : 1;
-
-      this.top += this.currentDistance;
-      this.element.scrollTo(0, this.top);
-
-      if (typeof ScrollTrigger !== "undefined") {
-        ScrollTrigger.update();
-      }
-
-      requestAnimationFrame(this.scroll);
-    }
-  }
+function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
 }
 
-const scroll = new Scrooth({
-  element: window,
-  strength: 30,
-  acceleration: 1.75,
-  deceleration: 0.875,
+requestAnimationFrame(raf);
+
+
+
+
+// ScrollTrigger와 Lenis 연동
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.ticker.add((time) => {
+  lenis.raf(time * 1000);
 });
+
+ScrollTrigger.defaults({
+  scroller: document.querySelector('.lenis')
+});
+
 
 $(document).ready(function () {
   gsap.registerPlugin(ScrollTrigger);

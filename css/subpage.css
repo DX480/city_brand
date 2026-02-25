@@ -110,13 +110,30 @@ header a:last-child{
 #service .title_wrap{width: 100%; display: flex; flex-direction: column; gap: 8px;}
 #service .card_list{width: 100%; display: flex; flex-direction: column; gap: 100px;}
 #service .card_list .card{width: 100%; display: flex; flex-direction: column; gap: 72px;}
-#service .card_list .card .card_title_wrap{width: 100%; display: flex; justify-content: space-between; align-items: center; border-bottom: #000 2px solid;}
+#service .card_list .card .card_title_wrap{width: 100%; display: flex; justify-content: space-between; align-items: center; border-bottom: #000 2px solid; padding: 0 0 5px 0; box-sizing: border-box;}
 #service .card_list .card .card_title_wrap .contents_title_large{color: #FF9C4B; line-height: 130%; font-weight: 600;}
 #service .card_list .card .card_title_wrap .contents_article_small{color: #9c9c9c; font-weight: 400;}
 #service .card_info{display: flex; flex-direction: column; gap: 56px;}
 #service .card_info .contents_article_medium{font-weight: 500;}
 
 /* service_process */
-.service_process{ width: 100%; display: flex; padding: 54px 100px; box-sizing: border-box; background: #121212;}
+.service_process{ width: 100%; display: flex; padding: 54px 100px; box-sizing: border-box; background: #121212; color: #fff;}
 
+.service_process_swiper{ width: 100%;}
+.service_process .swiper-wrapper{ width: 100%;  flex-direction: column;}
+.service_process .swiper-slide{width: 100%; height: 542px; display: flex; justify-content: space-between; }
+.service_process .swiper-slide .card_list{display: flex; gap: 66px;}
+.service_process .swiper-slide .card_list .card{display: flex; flex-direction: column; gap: 16px; width: 450px; height: 350px;  }
+.service_process .swiper-slide .card_list .card_title_wrap{display: flex; flex-direction: column; gap: 4px;}
+.service_process .swiper-slide .card_list .card_title_wrap .contents_title_xxxsmall{color: #A5A5A5; line-height: 130%;}
+.service_process .swiper-slide .card_list .contents_article_medium{font-weight: 400;}
+.swiper-slide .title_wrap .section_sub_title{ color: #6FFD8E;}
+.swiper-slide > .contents_article_medium{ line-height: 130%;}
+
+
+
+.swiper-slide:first-child{ justify-content: space-between; }
+.swiper-slide:first-child .title_wrap{ display: flex;  flex-direction: column; justify-content: center;}
+.swiper-slide:first-child .title_wrap .section_title{color: #6FFD8E;}
+.swiper-slide:first-child .line{ width: 430px; height: calc( ( 100% / 2 ) - 12px ) ; border-bottom: 12px solid #6FFD8E;}
 
