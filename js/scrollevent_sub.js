@@ -51,4 +51,22 @@ $(document).ready(function () {
   );
 
 
+let service_process = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".service_process",
+      start: "center 50%",
+      end: "+=400%",
+      scrub: 1,
+      pin:".service_process"
+    
+    },
+  });
+
+ service_process.to(
+    ".service_process",
+    {
+     "overflow" : "hidden"
+    },
+    0,
+  );
 });

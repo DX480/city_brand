@@ -284,6 +284,7 @@ header a:last-child{
     display: flex; flex-direction: column; padding: 36px 36px;
     border-radius: 15px; background: #fff; gap: 24px;
 }
+
 .service .card_list .card .card_body img{
     width: 100%;
     height: 285px;
@@ -418,9 +419,9 @@ gap: 33px;
 
 
   /* contact */
-.Contact{ position: relative; width: 100%; padding: 56px 160px 160px 160px; box-sizing: border-box; display: flex; justify-content: space-between; background: #121212; align-items: end;}
+.Contact{ position: relative; width: 100%; padding: 149px 160px; box-sizing: border-box; display: flex; justify-content: space-between; background: #121212; align-items: end;}
 .Contact p{ color: #fff; font-family: 'Paperlogy'; font-size: 130px; line-height: 150%; letter-spacing: 0px; font-weight: 600; }
-.Contact p:first-child{z-index: 222; top: 56px; left: 160px; position: absolute; color: #00000000; -webkit-text-stroke-width: 4px;  -webkit-text-stroke-color: #fff;  }
+.Contact p:first-child{z-index: 222; top: 149px; left: 160px; position: absolute; color: #00000000; -webkit-text-stroke-width: 4px;  -webkit-text-stroke-color: #fff;  }
 .Contact p span{letter-spacing: -5px; }
 
 
