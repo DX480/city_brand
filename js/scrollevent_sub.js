@@ -54,18 +54,47 @@ $(document).ready(function () {
 let service_process = gsap.timeline({
     scrollTrigger: {
       trigger: ".service_process",
-      start: "center 50%",
-      end: "+=400%",
+      start: "center center ",
+      end: "+=300%",
       scrub: 1,
-      pin:".service_process"
+      pin:true,
+      pinSpacing: true,
     
     },
   });
 
- service_process.to(
-    ".service_process",
+ let workTimeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#work",
+      start: "top center",
+      end: "+=50%",
+      scrub: 1,
+    },
+  });
+
+  workTimeline.to(
+    "#work",
     {
-     "overflow" : "hidden"
+       opacity: 1,
+      duration: 1,
+    },
+    0,
+  );
+
+ let serviceTimeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#service",
+      start: "bottom center",
+      end: "+=50%",
+      scrub: 1,
+    },
+  });
+
+  serviceTimeline.to(
+    "#service",
+    {
+       opacity: 0,
+      duration: 1,
     },
     0,
   );
