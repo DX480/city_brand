@@ -165,9 +165,12 @@ header a:last-child{
 .fontlist .card_list_wrap{ width: 100%; display: flex; flex-direction: column; gap: 48px; }
 .fontlist .card_list_wrap .swiper{width: 100%;}
 .fontlist .card_list_wrap .swiper-wrapper{display: flex; transition-timing-function: linear; justify-content: space-around;}
-.fontlist .card_list_wrap .swiper-wrapper .swiper-slide { width: fit-content !important; display: flex; gap: 24px; color: #fff; box-sizing: border-box; align-items: center;}
-.fontlist .card_list_wrap .swiper-wrapper .swiper-slide .font_card_thum{ border-radius: 20px;}
-.fontlist .card_list_wrap .swiper-wrapper .swiper-slide p{display: flex; color: #fff;  }
+.fontlist .card_list_wrap .swiper-wrapper .swiper-slide { width: 4110px !important; display: flex; justify-content: space-between; color: #fff; box-sizing: border-box; align-items: center;}
+.fontlist .card_list_wrap .swiper-wrapper .swiper-slide .font{ display: flex; gap: 24px;}
+.fontlist .card_list_wrap .swiper-wrapper .swiper-slide .font_card_thum{ border-radius: 20px; width: 130px; height: 130px;}
+.fontlist .card_list_wrap .swiper-wrapper .swiper-slide .font_card_title{ aspect-ratio: auto 1/1;}
+
+
 
   /* contact */
 .Contact{ position: relative; width: 100%; padding: 149px 160px ; box-sizing: border-box; display: flex; justify-content: space-between; background: #121212; align-items: end;}
