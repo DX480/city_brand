@@ -4,8 +4,8 @@ let rollingSwiper;
 
 function PlayRollingSwiperTop() {
   rollingSwiperTop = new Swiper('.collaborations_slide_top', {
+    spaceBetween: 88,
     init:true,
-   loop: true,
     slidesPerView: 'auto',
     loop:true,
     mousewheel:false,
@@ -16,8 +16,8 @@ function PlayRollingSwiperTop() {
       delay:0,
       disableOnInteraction:false,
     },
-    speed: 5000,
-    loopedSlides: 5,
+    speed: 17000,
+    loopedSlides: 3,
   });
 }
 
@@ -27,9 +27,7 @@ window.addEventListener('load', function () {
 
 function PlayRollingSwiperBtm() {
   rollingSwiperBtm = new Swiper('.collaborations_slide_btm ', {
-     ltl: true,
-    init:true,
-   loop: true,
+    spaceBetween: 88,
     slidesPerView: 'auto',
     loop:true,
     mousewheel:false,
@@ -40,8 +38,8 @@ function PlayRollingSwiperBtm() {
       delay:0,
       disableOnInteraction:false,
     },
-    speed: 5000,
-    loopedSlides: 5,
+    speed: 17000,
+    loopedSlides: 3,
   });
 
 

@@ -15,13 +15,13 @@ let rollingSwiperBtm;
       delay:0,
       disableOnInteraction:false,
     },
-    speed: 5000,
-    loopedSlides: 6,
+    speed: 17000,
+    loopedSlides: 3,
   });
 
 
 
-/*   rollingSwiperBtm = new Swiper('.font_slide_btm ', {
+  rollingSwiperBtm = new Swiper('.font_slide_btm ', {
     spaceBetween: 88,
     init:true,
     slidesPerView: 'auto',
@@ -34,7 +34,7 @@ let rollingSwiperBtm;
       delay:0,
       disableOnInteraction:false,
     },
-    speed: 5000,
+    speed: 17000,
     loopedSlides: 3,
   });
- */
+
