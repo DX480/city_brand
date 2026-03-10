@@ -180,7 +180,7 @@ header a:last-child{
 .project .bg_img:last-child{ z-index: 1; position: absolute; bottom: 50px; right: -686px; width: 1400px; height: 1400px; background: rgba(151, 238, 255, 0.5); border-radius: 1400px;}
 
 
-.project .bg_ellipse01{ width: 970px; height: 970px; border: 5px solid #6FFD8E; border-radius: 1000px; position: absolute; top: 523px; left: -205px;}
+.project .bg_ellipse01{ width: 970px; height: 970px; border: 5px solid #6FFD8E; border-radius: 1000px; position: absolute; top: 600px; left: -300px;}
 .project .bg_ellipse02{ width: 1300px; height: 1300px; border: 5px solid #6FFD8E; border-radius: 1000px; position: absolute; bottom: 410px; right: -670px;}
 
 /* overview */
@@ -216,6 +216,7 @@ header a:last-child{
 }
 
 .overview .article_wrap .sign_img{
+width: 130px; height: 53px;
     background: url("../images/sign.png") 50% 50% /cover no-repeat;
 }
 .overview .contents_title_small{
@@ -270,14 +271,9 @@ header a:last-child{
     display: flex; flex-direction: column; padding: 24px 36px;
     border-radius: 15px; background: #FF9C4B; color: #fff;
 }
-.service .card_list .card .card_head .title_wrap{
-    display: flex; gap: 8px; align-items: end;
-}
+
 .service .card .title_wrap .contents_title_medium{
     line-height: 130%; letter-spacing: -1px;
-}
-.service .card .title_wrap .contents_title_xxsmall{
-    line-height: 130%; letter-spacing: -1px; color: #FF6600;
 }
 
 .service .card_list .card .card_body{
