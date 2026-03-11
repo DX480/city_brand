@@ -193,6 +193,7 @@ header a:last-child{
     display: flex; flex-direction: column; justify-content: space-between;
     box-sizing: border-box;
     color: #fff;
+    overflow: hidden;
 }
 
 .overview img{
