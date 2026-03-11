@@ -32,7 +32,7 @@ $(document).ready(function () {
     scrollTrigger: {
       trigger: ".banner",
       start: "top top",
-      end: "+=300%",
+      end: "+=200%",
       scrub: 1,
       pin: true,
       pinSpacing: true,

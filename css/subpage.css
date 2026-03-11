@@ -153,7 +153,7 @@ header a:last-child{
 #work .work_card_list .work_card .card_info .card_text_wrap .card_title_wrap { padding-bottom: 12%; }
 #work .work_card_list .work_card .card_info .card_text_wrap .contents_title_large { width: 100%; display: flex; font-weight: 600;}
 #work .work_card_list .work_card .card_info .card_text_wrap .contents_article_medium { width: 100%; display: flex; font-weight: 400;}
-#work .work_card .work_card_img { width: 60%; }
+#work .work_card .work_card_img { width: 60%; border-radius: 15px; overflow: hidden; }
 
 
 /* fontlist */

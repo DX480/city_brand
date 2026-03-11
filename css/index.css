@@ -386,7 +386,7 @@ gap: 33px;
   opacity: 0;
 }
 
-.representation .bg_ellipse01{ width: 850px; height: 850px; border: 5px solid #6FFD8E; border-radius: 1000px; position: absolute; bottom: 86px; right: 202px;}
+.representation .bg_ellipse01{ width: 850px; height: 850px; border: 5px solid #6FFD8E; border-radius: 1000px; position: absolute; bottom: 86px; right: 202px; z-index: -1;}
 
 
 /* .history */
